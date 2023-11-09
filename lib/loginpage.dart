@@ -26,7 +26,7 @@ class Loginstate extends State<Loginpage> {
         child: Column(
           children: [
             SizedBox(height:50,width: 50,),
-      Image(image: AssetImage("assets/img.png",),height: 100,width: 100,),
+      Image(image: AssetImage("assets/ostrich.png",),height: 100,width: 100,),
       SizedBox(height:50,width: 50,),
       Padding(padding:EdgeInsets.only(left: 50,right: 50),   //  b/w space correct aavan
       child: TextField(

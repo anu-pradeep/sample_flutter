@@ -34,7 +34,7 @@ class myappstate extends State<myapp>
           child: Center(
             child: Column(
               children: [
-                Image(image: AssetImage("assets/img.png"),height: 100,width: 100,),
+                Image(image: AssetImage("assets/ostrich.png"),height: 100,width: 100,),
                 SizedBox(height: 30,),
                 Text("WELCOME",style: TextStyle(fontSize: 30,fontStyle:FontStyle.italic,color: Colors.red,),),
               ],
