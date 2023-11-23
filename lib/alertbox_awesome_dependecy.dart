@@ -8,13 +8,13 @@ void main()
 class awesome extends StatefulWidget
 {
   @override
-  State<awesome> createState()=> alertawestate();
+  State<awesome> createState()=> Awesomestate();
 }
-class alertawestate extends State<awesome>
+class Awesomestate extends State<awesome>
 {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.lightGreen[300],
       body: Center(
         child: Container(
           child: Padding(
@@ -23,32 +23,32 @@ class alertawestate extends State<awesome>
               child: Column(
                 children: [
                   AnimatedButton(
-                      text: "warning box",color: Colors.deepPurple,width: 150,
-                      pressEvent: (){
-                        AwesomeDialog(context: context,
-                          dialogType: DialogType.info,
-                          //borderSide: BorderSide(color: Colors.black,width: 30,),
-
-                          buttonsBorderRadius: BorderRadius.all(Radius.circular(20),),
-                          dismissOnTouchOutside: true,
-                          dismissOnBackKeyPress: false,
-                          onDismissCallback: (type) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text('Dismissed by $type'),
-                              ),
-                            );
-                          },
-                          headerAnimationLoop: false,
+                      text: "WARNING",color: Colors.red,width: 200,
+                      pressEvent: ()async{
+                        final dismissmode = await AwesomeDialog(
+                          context: context,
+                          dialogType: DialogType.noHeader,
+                          buttonsBorderRadius: BorderRadius.all(Radius.circular(2),),
                           animType: AnimType.bottomSlide,
-                          title: "question",
-                          desc: "description here...",
+                          title: "Alert !!",
+                          titleTextStyle: const TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          desc: "are you sure you want to exit..?", // second title in the box
                           showCloseIcon: true,
-                            btnCancelOnPress: (){},
-                          btnOkOnPress: (){}
+                          btnCancelOnPress: (){},
+                          btnOkOnPress: (){},
+                          autoDismiss: false,
+                          onDismissCallback: (type){
+                            Navigator.of(context).pop(type);
+                          },
+                          barrierColor: Colors.lightGreen[200],
                         ).show();
-                      },
-                  )
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Dismiss $dismissmode"),),);
+                      }
+                  ),
                 ],
               ),
             ),

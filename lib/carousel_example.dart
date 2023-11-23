@@ -207,8 +207,8 @@ class Vegitables extends StatelessWidget{
               Container(
                 // height: 90,
                 //width: 120,
-                height: MediaQuery.of(context).size.height / 9,
-                width: MediaQuery.of(context).size.width * .3,
+                height: MediaQuery.of(context).size.height /12,
+                width: MediaQuery.of(context).size.width * .6,
                 decoration: BoxDecoration(
                   boxShadow: const [
                     BoxShadow(
@@ -219,11 +219,11 @@ class Vegitables extends StatelessWidget{
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(image[index])),
+                      image: NetworkImage(image[index]),),
                 ),
               ),
               const SizedBox(
-                height: 8,
+                height: 10,
               ),
               Text(name[index]),
             ],

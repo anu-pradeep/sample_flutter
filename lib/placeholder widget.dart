@@ -13,15 +13,13 @@ class placeholder extends StatelessWidget
   return Scaffold(
     appBar: AppBar(title: Text("place holder widget"),),
 
-    body: Container(
-      child: GridView.builder(
-        padding: EdgeInsetsDirectional.symmetric(horizontal: 20,vertical: 20),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 2),
-          itemBuilder: (context,index)
-        {
-          return placeholder();
-        }
-      ),
+    body: GridView.builder(
+      padding: EdgeInsetsDirectional.symmetric(horizontal: 20,vertical: 20),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 2),
+        itemBuilder: (context,index)
+      {
+        return placeholder();
+      }
     ),
   );
   }
