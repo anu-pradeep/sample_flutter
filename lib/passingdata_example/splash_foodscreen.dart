@@ -3,13 +3,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sample_flutter/passingdata_example/login_foodscreen.dart';
-void main()
+/*void main()
 {
   runApp(MaterialApp(
     home: splashscreen(),
   debugShowCheckedModeBanner: false,
   useInheritedMediaQuery: true,));
-}
+}*/
 class splashscreen extends StatefulWidget
 {
   @override

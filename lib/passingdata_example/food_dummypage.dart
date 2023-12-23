@@ -1,15 +1,18 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sample_flutter/passingdata_example/food_list_items.dart';
 import 'package:sample_flutter/passingdata_example/food_products.dart';
+import 'package:sample_flutter/passingdata_example/splash_foodscreen.dart';
 void main()
 {
   runApp(MaterialApp(
-    home: fooddummy(),
+    home:splashscreen(),
     debugShowCheckedModeBanner: false,
     useInheritedMediaQuery: true,
     routes:{
+      //"first page"  : (context)=>  fooddummy(),
       "second page" :(context)=> fooditems(),
     },
   ));

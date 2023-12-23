@@ -1,10 +1,10 @@
 import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:sample_flutter/passingdata_example/food_list_items.dart';
-void main()
+/*void main()
 {
   runApp(MaterialApp(home: fooditems(),));
-}
+}*/
 class fooditems extends StatelessWidget
 {
   @override
